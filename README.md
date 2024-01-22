@@ -31,26 +31,3 @@
   </a>
   </div> 
 </div>
-
-## 💻 Tech Stack
-<p align="left">
-    <!--Android-->
-    <img
-            src="https://www.vectorlogo.zone/logos/android/android-ar21.svg"
-            alt="android" /> 
-    <a href="https://kotlinlang.org" target="_blank"> <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/androidstudio/androidstudio-original.svg" alt="kotlin" width="40" height="40"/>
-    </a>  
-    <!--Kotlin-->
-    <a href="https://kotlinlang.org" target="_blank"> <img
-            src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="40" height="40"/>
-    </a>   
-    <!--Java-->
-    <a href="https://www.java.com" target="_blank"> <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java"
-            width="40" height="40"/> </a>
-    <!--Android-->
-    <a href="https://developer.android.com" target="_blank"> <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain-wordmark.svg"
-            alt="android" width="40" height="40"/> </a>
-</p>
