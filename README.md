@@ -9,8 +9,8 @@
 - 🤝 I’m looking to collaborate on Nodejs Project 
 - 🌱 I’m currently learning **Advance NodeJs, Server Load Balancing**
 - 📝 I regularly write articles on [CodeMiner](https://medium.com/learn-to-earn) and [CodeNestors](https://codenestors.com/)
-- 💬 Ask me about **nodejs, expressjs, socketio, mongodb backend problems**
-- 📫 How to reach me **axat.sachani@gmail.com**
+- 💬 Ask me about **nodejs, expressjs, socketio, mongodb, backend problems**
+- 📫 Reach me **axat.sachani@gmail.com**
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
