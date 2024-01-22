@@ -1,63 +1,29 @@
-### Hi, I'm Axat Sachani 👋
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=AxatSachani&label=👀&color=blue&style=plastic" alt="AxatSachani" /> </p>
-
-## 📰 About
-
-👩‍💻 Backend Developer NodeJS
-
-💻 I develop NodeJs project with Nodejs, JavaScript, TypeScript, ExpressJS, Socket.IO, MongoDB, PostgreSQL, MySQL, Graphql And RazorPay 
-
-💪 My expertise is in Create Robust APIs, Database Design, Database Migration, Multiple Admin & User Role
-
-🤝 I’m looking to collaborate on Nodejs Project  
-
-📖 I’m currently learning Advance NodeJs and Server Load Balancing
-
-💬 Talk about Nodejs, Programming, Developer Problems
-
-
-## 🌐 Let's connect on
-<div id="header" align="left">
-  <div id="badges">
-  <a href="https://www.linkedin.com/in/akshatsachani">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  </a>
-  <a href="https://medium.com/learn-to-earn">
-    <img src="https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white" alt="Medium Badge"/>
-  </a>
-  <a href="https://stackoverflow.com/users/19117077/axat-sachani">
-    <img src="https://img.shields.io/badge/stackoverflow-%2312100E.svg?&style=for-the-badge&logo=stackoverflow&logoColor=red" alt="StackOverFlow Badge"/>
-  </a>
-  </div> 
-</div>
 <h1 align="center">Hi 👋, I'm Axat Sachani</h1>
 <h3 align="center">Backend Developer Nodejs</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=axatsachani&label=Profile%20views&color=0e75b6&style=flat" alt="axatsachani" /> </p>
 
+
+- 💻 I develop NodeJs project with Nodejs, JavaScript, TypeScript, ExpressJS, Socket.IO, MongoDB, PostgreSQL, MySQL, Graphql And RazorPay
+- 💪 My expertise is in Create Robust APIs, Database Design, Database Migration, Multiple Admin & User Role
+- 🤝 I’m looking to collaborate on Nodejs Project 
 - 🌱 I’m currently learning **Advance NodeJs, Server Load Balancing**
-
-- 👨‍💻 All of my projects are available at [https://codenestors.com/](https://codenestors.com/)
-
-- 📝 I regularly write articles on [https://medium.com/learn-to-earn](https://medium.com/learn-to-earn)
-
+- 📝 I regularly write articles on [CodeMiner](https://medium.com/learn-to-earn) and [CodeNestors](https://codenestors.com/)
 - 💬 Ask me about **nodejs, expressjs, socketio, mongodb backend problems**
-
 - 📫 How to reach me **axat.sachani@gmail.com**
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">🌐 Let's connect on</h3>
 <p align="left">
+<a href="https://linkedin.com/in/akshatsachani" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="akshatsachani" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/axatsachani" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="axatsachani" height="30" width="40" /></a>
+<a href="https://medium.com/@codeminer" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@codeminer" height="30" width="40" /></a>
+<a href="https://stackoverflow.com/users/19117077" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="19117077" height="30" width="40" /></a>
 <a href="https://dev.to/learn-to-earn" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="learn-to-earn" height="30" width="40" /></a>
 <a href="https://twitter.com/akshatt_21" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="akshatt_21" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/akshatsachani" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="akshatsachani" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/19117077" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="19117077" height="30" width="40" /></a>
-<a href="https://medium.com/@codeminer" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@codeminer" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/axatsachani" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="axatsachani" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
