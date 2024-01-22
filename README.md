@@ -1,13 +1,14 @@
-### Hi, I'm Harshali 👋
+### Hi, I'm Axat Sachani 👋
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=HarshaliSachani&label=👀&color=blue&style=plastic" alt="HarshaliSachani" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=AxatSachani&label=👀&color=blue&style=plastic" alt="AxatSachani" /> </p>
 
 ## 📰 About
 
-👩‍💻 Android Mobile & TV developer  
-💻 I develop Android project with Kotlin, Java, Jetpack Compose, Kotlin Multiplatform  
-🤝 I’m looking to collaborate on Android Project  
-📖 I’m currently learning Jetpack Compose and Kotlin Multiplatform  
+👩‍💻 Backend Developer NodeJS
+💻 I develop NodeJs project with Nodejs, JavaScript, TypeScript, ExpressJS, Socket.IO, MongoDB, PostgreSQL, MySQL, Graphql And RazorPay 
+💪 My expertise is in Create Robust APIs, Database Design, Database Migration, Multiple Admin & User Role
+🤝 I’m looking to collaborate on Nodejs Project  
+📖 I’m currently learning Advance NodeJs and Server Load Balancing
 💬 Talk about Android, Kotlin, Java
 
 
