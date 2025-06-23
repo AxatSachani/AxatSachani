@@ -8,8 +8,8 @@
 - 💪 My expertise is in Create Robust APIs, Database Design, Database Migration, Multiple Admin & User Role
 - 🤝 I’m looking to collaborate on Nodejs Project 
 - 🌱 I’m currently learning **Advance NodeJs, Server Load Balancing**
-- 📝 I regularly write articles on [CodeMiner](https://medium.com/learn-to-earn) and [CodeNestors](https://codenestors.com/)
-- 💬 Ask me about **nodejs, expressjs, socketio, mongodb, backend problems**
+- 📝 I regularly write articles on [CodeMiner](https://medium.com/learn-to-earn) and [Moonlightdevs](https://moonlightdevs.com/)
+- 💬 Ask me about **nodejs, expressjs, nestjs, socketio, mongodb, mysql, postgres, AWS, backend problems**
 - 📫 Reach me **axat.sachani@gmail.com**
 
 ### Blogs posts
