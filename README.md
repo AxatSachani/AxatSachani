@@ -2,6 +2,9 @@
 <h3 align="center">Backend Developer Nodejs</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=axatsachani&label=Profile%20views&color=0e75b6&style=flat" alt="axatsachani" /> </p>
+<p align="left"> 
+        <a href="https://linkedin.com/in/akshatsachani" target="blank"><img align="center" src="https://img.shields.io/badge/linkedin-Axat%20Sachani-blue" alt="akshatsachani" /></a>
+</p>
 
 
 - 💻 I develop NodeJs project with Nodejs, JavaScript, TypeScript, ExpressJS, NestJS, Socket.IO, MongoDB, PostgreSQL, MySQL, Graphql And RazorPay
