@@ -1,11 +1,13 @@
 <h1 align="center">Hi 👋, I'm Axat Sachani</h1>
 <h3 align="center">Backend Developer Nodejs</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=axatsachani&label=Profile%20views&color=0e75b6&style=flat" alt="axatsachani" /> </p>
-<p align="left"> 
-        <a href="https://linkedin.com/in/akshatsachani" target="blank"><img align="center" src="https://img.shields.io/badge/linkedin-Axat%20Sachani-blue" alt="akshatsachani" /></a>
-</p>
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=axatsachani&label=Profile%20views&color=0e75b6&style=flat" alt="axatsachani" />
 
+  <a href="https://www.linkedin.com/in/akshatsachani" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Akshat%20Sachani-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+</p>
 
 - 💻 I develop NodeJs project with Nodejs, JavaScript, TypeScript, ExpressJS, NestJS, Socket.IO, MongoDB, PostgreSQL, MySQL, Graphql And RazorPay
 - 💪 My expertise is in Create Robust APIs, Database Design, Database Migration, Multiple Admin & User Role
