@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Axat Sachani</h1>
-<h3 align="center">Backend Developer Nodejs</h3>
+<h3 align="center">Software Engineer - II</h3>
 
 <p align="left">
   <img src="https://komarev.com/ghpvc/?username=axatsachani&label=Profile%20views&color=0e75b6&style=flat" alt="axatsachani" />
@@ -9,11 +9,11 @@
   </a>
 </p>
 
+<!--- 📝 I regularly write articles on [CodeMiner](https://medium.com/learn-to-earn) and [Moonlightdevs](https://moonlightdevs.com/) -->
 - 💻 I develop NodeJs project with Nodejs, JavaScript, TypeScript, ExpressJS, NestJS, Socket.IO, MongoDB, PostgreSQL, MySQL, Graphql And RazorPay
 - 💪 My expertise is in Create Robust APIs, Database Design, Database Migration, Multiple Admin & User Role
 - 🤝 I’m looking to collaborate on Nodejs Project 
 - 🌱 I’m currently learning **Advance NodeJs, Server Load Balancing**
-- 📝 I regularly write articles on [CodeMiner](https://medium.com/learn-to-earn) and [Moonlightdevs](https://moonlightdevs.com/)
 - 💬 Ask me about **nodejs, expressjs, nestjs, socketio, mongodb, mysql, postgres, AWS, backend problems**
 - 📫 Reach me **axat.sachani@gmail.com** or [akshatsachani.in](https://akshatsachani.in)
 
