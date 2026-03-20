@@ -10,7 +10,7 @@
 </p>
 
 <!--- 📝 I regularly write articles on [CodeMiner](https://medium.com/learn-to-earn) and [Moonlightdevs](https://moonlightdevs.com/) -->
-- 💻 I develop NodeJs project with Nodejs, JavaScript, TypeScript, ExpressJS, NestJS, Socket.IO, MongoDB, PostgreSQL, MySQL, Graphql And RazorPay
+- 💻 I develop project with Nodejs, Python, JavaScript, TypeScript, ExpressJS, NestJS, Socket.IO, MongoDB, PostgreSQL, MySQL, Graphql And RazorPay
 - 💪 My expertise is in Create Robust APIs, Database Design, Database Migration, Multiple Admin & User Role
 - 🤝 I’m looking to collaborate on Nodejs Project 
 - 🌱 I’m currently learning **Advance NodeJs, Server Load Balancing**
