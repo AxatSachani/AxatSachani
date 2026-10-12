@@ -15,8 +15,7 @@
 - 🤝 I’m looking to collaborate on Nodejs Project 
 - 🌱 I’m currently learning **Advance NodeJs, Server Load Balancing**
 - 💬 Ask me about **nodejs, expressjs, nestjs, socketio, mongodb, mysql, postgres, AWS, backend problems**
-- 📫 Reach me **axat.sachani@gmail.com** or [akshatsachani.in](https://akshatsachani.in)
-
+- 📫 Reach me **axat.sachani@gmail.com**
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
