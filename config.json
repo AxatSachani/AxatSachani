@@ -84,14 +84,14 @@
       "glyph": "target",
       "role": "INVITE ONLY",
       "status": "invite",
-      "boot": "F&O terminal",
+      "boot": "live F&O terminal",
       "tagline": "Real-time F&O trading terminal for Indian markets.",
-      "desc": "Scans NIFTY, BANKNIFTY & SENSEX every 5 min in market hours — option chain, OI flow, max pain, IV term structure, order blocks — and turns it into ranked trade ideas with Telegram alerts and an Angel One execution gate.",
+      "desc": "Live NSE & BSE market intelligence across index and stock F&O, sectors and equities: streaming option chains, OI flow, max pain, IV term structure, sector rotation and market breadth, turned into ranked trade ideas with Telegram alerts and Angel One execution.",
       "tags": [
-        "SvelteKit",
-        "Express + SSE",
-        "Angel One SmartAPI",
-        "Postgres"
+        "Live NSE/BSE data",
+        "Index & stock F&O",
+        "Options analytics",
+        "Angel One"
       ]
     },
     {
