@@ -848,7 +848,7 @@ def guestbook_svg():
         lines.append(([("guestbook.log is empty — ", AMBER), ("be the first developer to sign it.", "#ffffff")], False))
     clips, body, tend, yend = typed(lines, x + 20, y + 56, 32, 14, start=.5, cps=40, prefix="g")
     body += cursor(x + 20, yend, 14, tend)
-    head = (fig(40, 54, "FIG. 11 — GUESTBOOK", None)
+    head = (fig(40, 54, "FIG. 10 — GUESTBOOK", None)
             + f'<text x="{W-40}" y="54" fill="{AMBER}" font-size="13" text-anchor="end">SIGNED BY {GB.get("total", 0)} DEVELOPER{"S" if GB.get("total", 0) != 1 else ""}</text>'
             + f'<text x="{x}" y="{H-62}" fill="{LINE}" font-size="12.5">HOW IT WORKS  <tspan fill="{BLUE}">click </tspan><tspan fill="{GREEN}">SIGN THE GUESTBOOK</tspan><tspan fill="{BLUE}"> below → GitHub opens a pre-filled issue → press Submit.</tspan></text>'
             + f'<text x="{x}" y="{H-40}" fill="{BLUE}" font-size="12.5">A GitHub Action reads it, adds your name + message to this log, replies to thank you and closes the issue — about a minute, end to end.</text>')
@@ -874,8 +874,10 @@ def update_readme():
         put("REPOS", f'<p align="center">\n{cells}\n</p>')
     posts = S.get("posts") or []
     if posts:
-        rows = "\n".join(f'| `{p["date"]}` | **[{p["title"].replace("|", "–")}]({p["url"]})** | {" ".join("`" + t + "`" for t in p.get("tags", []))} |' for p in posts)
-        put("BLOG-POST-LIST", f"| published | article | topics |\n|:--|:--|:--|\n{rows}")
+        def nice(d):
+            return datetime.strptime(d, "%Y-%m-%d").strftime("%d %b %Y")
+        rows = "\n".join(f'- **[{p["title"]}]({p["url"]})**  \n  <sub>{nice(p["date"])} · {" · ".join("#" + t for t in p.get("tags", []))}</sub>' for p in posts)
+        put("BLOG-POST-LIST", rows)
     open(path, "w").write(md)
 
 
@@ -883,10 +885,7 @@ if __name__ == "__main__":
     hero_svg(); telemetry_svg(); skyline_svg(); clock_svg(); punchcard_svg(); bom_svg(); arch_svg(); pulse_svg(); guestbook_svg(); footer_svg()
     for p in CFG.get("products", []):
         product_card_svg(p)
-    pins = S.get("pinned", [])[:6]
-    for i, r in enumerate(pins):
-        repo_card_svg(i, r)
-    keep = {f"product-{p['id']}.svg" for p in CFG.get("products", [])} | {f"repo-{i+1}.svg" for i in range(len(pins))}
+    keep = {f"product-{p['id']}.svg" for p in CFG.get("products", [])}
     for f in os.listdir(OUT):  # drop panels that no longer exist
         if (f.startswith(("product-", "repo-")) and f not in keep) or f == "activity.svg":
             os.remove(os.path.join(OUT, f))
