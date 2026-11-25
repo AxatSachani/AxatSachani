@@ -1,0 +1,64 @@
+# BLUEPRINT × TERMINAL pipeline
+# - every 3 hours: pulls live stats from the GitHub API and re-renders every SVG in /generated
+# - on "deploy: <message>" issues: adds the visitor to the guestbook board, replies, closes the issue
+name: blueprint-pipeline
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/**", "config.json", ".github/workflows/pipeline.yml"]
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: blueprint-pipeline
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'issues' || startsWith(github.event.issue.title, 'deploy')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Guestbook — register visitor
+        id: gb
+        if: github.event_name == 'issues'
+        run: python3 scripts/guestbook.py
+
+      - name: Fetch live stats (GraphQL)
+        continue-on-error: true   # on API hiccups, keep the last good data and still re-render
+        env:
+          # Optional: add a PAT as secret GH_STATS_TOKEN for private-repo languages / commit hours.
+          GH_TOKEN: ${{ secrets.GH_STATS_TOKEN || github.token }}
+        run: python3 scripts/fetch.py
+
+      - name: Render SVGs
+        run: python3 scripts/render.py
+
+      - name: Commit
+        run: |
+          git config user.name "blueprint-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data generated
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "chore(telemetry): sync $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git pull --rebase origin main
+          git push
+
+      - name: Guestbook — reply and close
+        if: steps.gb.outputs.accepted == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUM: ${{ steps.gb.outputs.number }}
+        run: |
+          gh issue comment "$NUM" --repo "$GITHUB_REPOSITORY" --body-file comment.md
+          gh issue close "$NUM" --repo "$GITHUB_REPOSITORY" --reason completed
