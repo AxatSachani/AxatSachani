@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Interactive guestbook: a visitor opens an issue titled `deploy: <message>`.
+"""Interactive guestbook: a visitor opens an issue titled `sign: <message>`.
 This script validates + sanitises it, appends it to data/guestbook.json and writes
 the bot's reply to comment.md. All untrusted input is read from the event JSON file —
 never interpolated into shell commands.
@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = json.load(open(os.path.join(ROOT, "config.json")))
-PREFIX = CFG.get("guestbook_prefix", "deploy:").lower()
+PREFIX = CFG.get("guestbook_prefix", "sign:").lower()
 KEEP = int(CFG.get("guestbook_keep", 20))
 PATH = os.path.join(ROOT, "data", "guestbook.json")
 
@@ -46,12 +46,11 @@ def main():
     json.dump(book, open(PATH, "w"), indent=1)
     with open(os.path.join(ROOT, "comment.md"), "w") as f:
         f.write(f"""```console
-$ kubectl apply -f visitor-{book['total']:04d}.yaml
-deployment.apps/@{user} created
-$ kubectl rollout status deployment/@{user}
-deployment "@{user}" successfully rolled out ✅
+$ echo "{msg}" >> guestbook.log
+$ tail -1 guestbook.log
+#{book['total']:04d}  @{user}  "{msg}"
 ```
-Welcome aboard, @{user} — you are **visitor #{book['total']}**. Your message is now live on the profile (give it a minute to render).
+Thanks for signing, @{user} — you are **signer #{book['total']}**. Your message will appear in the guestbook on my profile within a minute.
 
 <sub>Want to build something together? Find me on <a href="https://www.linkedin.com/in/akshatsachani">LinkedIn</a>.</sub>
 """)

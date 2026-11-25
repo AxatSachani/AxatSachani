@@ -49,7 +49,8 @@ query($login:String!){
     pullRequests{ totalCount }
     merged: pullRequests(states:MERGED){ totalCount }
     issues{ totalCount }
-    repositoriesContributedTo(contributionTypes:[COMMIT,PULL_REQUEST,ISSUE,REPOSITORY]){ totalCount }
+    repositoriesContributedTo(includeUserRepositories:true, contributionTypes:[COMMIT,PULL_REQUEST,ISSUE,REPOSITORY]){ totalCount }
+    pinnedItems(first:6, types:REPOSITORY){ nodes{ ... on Repository{ name description url stargazerCount forkCount isFork pushedAt primaryLanguage{ name color } } } }
     repositories(ownerAffiliations:OWNER, isFork:false, first:100, orderBy:{field:PUSHED_AT, direction:DESC}){
       totalCount
       nodes{
@@ -80,6 +81,18 @@ query($login:String!){
   }
 }"""
 
+Q_REPOS30 = """
+query($login:String!, $from:DateTime!, $to:DateTime!){
+  user(login:$login){
+    contributionsCollection(from:$from, to:$to){
+      commitContributionsByRepository(maxRepositories:6){
+        repository{ name isPrivate primaryLanguage{ name color } }
+        contributions{ totalCount }
+      }
+    }
+  }
+}"""
+
 Q_HOURS = """
 query($login:String!, $uid:ID!){
   user(login:$login){
@@ -92,6 +105,51 @@ query($login:String!, $uid:ID!){
 
 def iso(d):
     return d.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def fetch_posts():
+    """Latest articles from the RSS feeds in config.json (Medium etc.)."""
+    import xml.etree.ElementTree as ET
+    from email.utils import parsedate_to_datetime
+    posts = []
+    for feed in CFG.get("feeds", []):
+        try:
+            req = urllib.request.Request(feed, headers={"User-Agent": "Mozilla/5.0 profile-pipeline"})
+            root = ET.fromstring(urllib.request.urlopen(req, timeout=30).read())
+            for it in root.iter("item"):
+                d = parsedate_to_datetime(it.findtext("pubDate"))
+                posts.append({"title": (it.findtext("title") or "").strip(), "url": (it.findtext("link") or "").split("?")[0],
+                              "date": d.strftime("%Y-%m-%d"), "tags": [c.text for c in it.findall("category")][:3]})
+        except Exception as ex:
+            print("feed failed:", feed, ex)
+    posts.sort(key=lambda p: p["date"], reverse=True)
+    return posts[:6]
+
+
+def check_uptime():
+    """Pings every product URL and keeps a rolling history (one sample per pipeline run)."""
+    path = os.path.join(ROOT, "data", "uptime.json")
+    hist = json.load(open(path)) if os.path.exists(path) else {}
+    for p in CFG.get("products", []):
+        url = p.get("check")
+        if not url:
+            continue
+        t0, ok, code = time.time(), False, 0
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 uptime-check"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                code = r.status; ok = 200 <= code < 400
+        except urllib.error.HTTPError as e:
+            code = e.code
+        except Exception:
+            code = 0
+        ms = int((time.time() - t0) * 1000)
+        h = hist.setdefault(p["id"], [])
+        h.append({"t": iso(datetime.now(timezone.utc)), "ok": ok, "ms": ms, "code": code})
+        hist[p["id"]] = h[-56:]  # 7 days at one check every 3h
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    json.dump(hist, open(path, "w"), indent=1)
+    print("uptime ok:", {k: v[-1] for k, v in hist.items()})
 
 
 def main():
@@ -157,13 +215,19 @@ def main():
 
     # ---- commit hour-of-day histogram (local timezone)
     hours = [0] * 24
+    punch = [[0] * 24 for _ in range(7)]  # [weekday Mon=0][hour]
+    last_commit = None
     try:
         hr = gql(Q_HOURS, login=LOGIN, uid=u["id"])["user"]["repositories"]["nodes"]
         for r in hr:
             t = (r.get("defaultBranchRef") or {}).get("target") or {}
             for c in (t.get("history") or {}).get("nodes", []):
-                h = datetime.fromisoformat(c["committedDate"].replace("Z", "+00:00")).astimezone(TZ).hour
-                hours[h] += 1
+                ct = datetime.fromisoformat(c["committedDate"].replace("Z", "+00:00"))
+                lt = ct.astimezone(TZ)
+                hours[lt.hour] += 1
+                punch[lt.weekday()][lt.hour] += 1
+                if last_commit is None or ct > last_commit:
+                    last_commit = ct
     except Exception as ex:  # never fail the whole build for this panel
         print("hours query failed:", ex)
 
@@ -205,6 +269,26 @@ def main():
     except Exception as ex:
         print("events fetch failed:", ex)
 
+    # ---- where commits went in the last 30 days (private repos are anonymised)
+    focus = []
+    try:
+        cc = gql(Q_REPOS30, login=LOGIN, **{"from": iso(now - timedelta(days=30)), "to": iso(now)})["user"]["contributionsCollection"]
+        for r in cc["commitContributionsByRepository"]:
+            repo = r["repository"]; lang = repo.get("primaryLanguage") or {}
+            focus.append({"name": None if repo["isPrivate"] else repo["name"], "private": repo["isPrivate"],
+                          "lang": lang.get("name"), "color": lang.get("color") or "#8b949e",
+                          "commits": r["contributions"]["totalCount"]})
+    except Exception as ex:
+        print("focus query failed:", ex)
+
+    pinned = []
+    for r in (u.get("pinnedItems") or {}).get("nodes", []):
+        if not r: continue
+        lang = r.get("primaryLanguage") or {}
+        pinned.append({"name": r["name"], "description": r.get("description") or "", "url": r["url"],
+                       "stars": r["stargazerCount"], "forks": r["forkCount"], "fork": r["isFork"],
+                       "pushed": r["pushedAt"], "lang": lang.get("name"), "color": lang.get("color") or "#8b949e"})
+
     stats = {
         "demo": False,
         "generated_at": iso(now),
@@ -219,12 +303,19 @@ def main():
         },
         "streak": {"current": cur, "longest": longest, "active_days_year": active_year},
         "best_day": best, "weekday": weekday, "calendar": weeks,
-        "hours": hours, "languages": languages[:10], "events": events[:12],
+        "hours": hours, "punch": punch, "last_commit": iso(last_commit) if last_commit else None,
+        "focus": focus, "pinned": pinned,
+        "languages": languages[:10], "events": events[:12],
     }
     os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
+    stats["posts"] = fetch_posts()
     json.dump(stats, open(os.path.join(ROOT, "data", "stats.json"), "w"), indent=1)
     print("stats ok:", json.dumps(stats["totals"]))
 
 
 if __name__ == "__main__":
+    try:
+        check_uptime()  # independent of the GitHub API
+    except Exception as ex:
+        print("uptime failed:", ex)
     main()
