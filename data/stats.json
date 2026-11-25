@@ -1,10 +1,10 @@
 {
  "demo": false,
- "generated_at": "2026-11-25T09:58:53Z",
+ "generated_at": "2026-11-25T10:01:16Z",
  "login": "AxatSachani",
  "name": "Akshat Sachani",
  "totals": {
-  "commits_all": 1644,
+  "commits_all": 1648,
   "prs": 33,
   "merged": 9,
   "reviews": 1,
@@ -12,8 +12,8 @@
   "stars": 11,
   "repos": 10,
   "followers": 4,
-  "contribs_year": 779,
-  "contributed_to": 0
+  "contribs_year": 783,
+  "contributed_to": 4
  },
  "streak": {
   "current": 6,
@@ -27,7 +27,7 @@
  "weekday": [
   120,
   159,
-  83,
+  87,
   69,
   82,
   169,
@@ -1609,7 +1609,7 @@
    },
    {
     "date": "2026-11-25",
-    "count": 6
+    "count": 10
    }
   ]
  ],
@@ -1629,7 +1629,7 @@
   40,
   26,
   10,
-  12,
+  16,
   15,
   7,
   8,
@@ -1638,6 +1638,268 @@
   6,
   18,
   13
+ ],
+ "punch": [
+  [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   1,
+   4,
+   22,
+   0,
+   0,
+   0,
+   1,
+   0,
+   1,
+   1,
+   0,
+   4,
+   5,
+   3
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   4,
+   18,
+   4,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   3,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   3,
+   7,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   3,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   0,
+   1,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   0,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   4,
+   0,
+   0,
+   0,
+   7,
+   9
+  ],
+  [
+   24,
+   22,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   0,
+   12,
+   5,
+   2,
+   7,
+   9,
+   5,
+   2,
+   2,
+   2,
+   0,
+   0,
+   0
+  ]
+ ],
+ "last_commit": "2026-11-25T10:01:06Z",
+ "focus": [
+  {
+   "name": "AxatSachani",
+   "private": false,
+   "lang": "Python",
+   "color": "#3572A5",
+   "commits": 11
+  }
+ ],
+ "pinned": [
+  {
+   "name": "razorpay-node",
+   "description": "Razorpay node.js bindings",
+   "url": "https://github.com/AxatSachani/razorpay-node",
+   "stars": 0,
+   "forks": 0,
+   "fork": true,
+   "pushed": "2026-09-30T04:48:11Z",
+   "lang": "JavaScript",
+   "color": "#f1e05a"
+  },
+  {
+   "name": "Algorithm-Best-Driver-Match",
+   "description": "Develop a function to find the best drivers based on user-defined start and end locations using city-lat-lng data. Calculate total distance and payment in dollars, considering distance-based and driver-specific rates. Use a third-party service for distance calculation and convert currencies as needed. Provide detailed results for each driver.",
+   "url": "https://github.com/AxatSachani/Algorithm-Best-Driver-Match",
+   "stars": 1,
+   "forks": 0,
+   "fork": false,
+   "pushed": "2026-10-10T11:13:27Z",
+   "lang": "JavaScript",
+   "color": "#f1e05a"
+  },
+  {
+   "name": "LeetCode",
+   "description": "Collection of LeetCode questions to ace the coding interview! ",
+   "url": "https://github.com/AxatSachani/LeetCode",
+   "stars": 1,
+   "forks": 0,
+   "fork": false,
+   "pushed": "2025-03-25T08:33:39Z",
+   "lang": "JavaScript",
+   "color": "#f1e05a"
+  },
+  {
+   "name": "CodeTalk",
+   "description": "CodeTalk is a chat app build with nodejs, mongodb and kotlin",
+   "url": "https://github.com/AxatSachani/CodeTalk",
+   "stars": 2,
+   "forks": 0,
+   "fork": false,
+   "pushed": "2024-01-21T10:21:00Z",
+   "lang": "JavaScript",
+   "color": "#f1e05a"
+  },
+  {
+   "name": "Project-Management",
+   "description": "The Task Collaboration Platform is a web application that allows users to create projects, add tasks to projects, and assign tasks to team members. The platform supports user authentication, role-based access control, and provides an organized way to manage projects and tasks.",
+   "url": "https://github.com/AxatSachani/Project-Management",
+   "stars": 2,
+   "forks": 0,
+   "fork": false,
+   "pushed": "2024-06-17T07:22:51Z",
+   "lang": "TypeScript",
+   "color": "#3178c6"
+  },
+  {
+   "name": "Event-Management",
+   "description": "The Event Management API is a RESTful service built with Node.js and MongoDB that allows users to create events and upload multiple images. It includes features such as event data storage, image uploads using Multer, and a dedicated endpoint for submitting event details. This API streamlines event organization and data management.",
+   "url": "https://github.com/AxatSachani/Event-Management",
+   "stars": 1,
+   "forks": 0,
+   "fork": false,
+   "pushed": "2024-06-17T07:20:25Z",
+   "lang": "JavaScript",
+   "color": "#f1e05a"
+  }
  ],
  "languages": [
   {
@@ -1667,6 +1929,68 @@
    "type": "PUSH",
    "repo": "AxatSachani/AxatSachani",
    "detail": "pushed to main"
+  }
+ ],
+ "posts": [
+  {
+   "title": "Redis Deployments Unveiled: Practical Case Studies",
+   "url": "https://medium.com/learn-to-earn/redis-deployments-unveiled-practical-case-studies-0c6f11eceaad",
+   "date": "2026-10-12",
+   "tags": [
+    "deployment",
+    "case-study",
+    "redis"
+   ]
+  },
+  {
+   "title": "What Are Wildcard SSL Certificates (And Do You Actually Need One)?",
+   "url": "https://medium.com/learn-to-earn/what-are-wildcard-ssl-certificates-and-do-you-actually-need-one-d8a9597f386b",
+   "date": "2026-10-12",
+   "tags": [
+    "ssl-certificate",
+    "web-development",
+    "security"
+   ]
+  },
+  {
+   "title": "Let\u2019s Encrypt vs Cloudflare vs Managed SSL: Which One Should You Use?",
+   "url": "https://codeminer.medium.com/lets-encrypt-vs-cloudflare-vs-managed-ssl-which-one-should-you-use-246dc37e7181",
+   "date": "2026-10-12",
+   "tags": [
+    "web-development",
+    "ssl-certificate",
+    "security"
+   ]
+  },
+  {
+   "title": "Free Custom Domain Options for Developers in 2026, Compared",
+   "url": "https://codeminer.medium.com/free-custom-domain-options-for-developers-in-2026-compared-5c823b113454",
+   "date": "2026-10-12",
+   "tags": [
+    "web-development",
+    "programming",
+    "domain-names"
+   ]
+  },
+  {
+   "title": "How Long Does DNS Propagation Really Take?",
+   "url": "https://codeminer.medium.com/how-long-does-dns-propagation-really-take-18d31c956098",
+   "date": "2026-10-12",
+   "tags": [
+    "dns",
+    "domain-names",
+    "web-development"
+   ]
+  },
+  {
+   "title": "How to Put a Render or Railway App on a Custom Domain With HTTPS",
+   "url": "https://codeminer.medium.com/how-to-put-a-render-or-railway-app-on-a-custom-domain-with-https-1d6402dd6d2b",
+   "date": "2026-10-12",
+   "tags": [
+    "devops",
+    "web-development",
+    "domain-names"
+   ]
   }
  ]
 }

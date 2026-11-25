@@ -99,6 +99,14 @@
 ### `09` &nbsp;OPEN SOURCE
 
 <!-- REPOS:START -->
+<p align="center">
+  <a href="https://github.com/AxatSachani/razorpay-node"><img src="./generated/repo-1.svg" width="49%" alt="razorpay-node — Razorpay node.js bindings"/></a>
+  <a href="https://github.com/AxatSachani/Algorithm-Best-Driver-Match"><img src="./generated/repo-2.svg" width="49%" alt="Algorithm-Best-Driver-Match — Develop a function to find the best drivers based on user-defined start and end locations using city-lat-lng data. Calculate total distance and payment in dollars, considering distance-based and driver-specific rates. Use a third-party service for distance calculation and convert currencies as needed. Provide detailed results for each driver."/></a>
+  <a href="https://github.com/AxatSachani/LeetCode"><img src="./generated/repo-3.svg" width="49%" alt="LeetCode — Collection of LeetCode questions to ace the coding interview! "/></a>
+  <a href="https://github.com/AxatSachani/CodeTalk"><img src="./generated/repo-4.svg" width="49%" alt="CodeTalk — CodeTalk is a chat app build with nodejs, mongodb and kotlin"/></a>
+  <a href="https://github.com/AxatSachani/Project-Management"><img src="./generated/repo-5.svg" width="49%" alt="Project-Management — The Task Collaboration Platform is a web application that allows users to create projects, add tasks to projects, and assign tasks to team members. The platform supports user authentication, role-based access control, and provides an organized way to manage projects and tasks."/></a>
+  <a href="https://github.com/AxatSachani/Event-Management"><img src="./generated/repo-6.svg" width="49%" alt="Event-Management — The Event Management API is a RESTful service built with Node.js and MongoDB that allows users to create events and upload multiple images. It includes features such as event data storage, image uploads using Multer, and a dedicated endpoint for submitting event details. This API streamlines event organization and data management."/></a>
+</p>
 <!-- REPOS:END -->
 
 <sub>Auto-synced from my pinned repositories — pin a different repo on GitHub and this section follows.</sub>
@@ -106,6 +114,14 @@
 ### `10` &nbsp;WRITING
 
 <!-- BLOG-POST-LIST:START -->
+| published | article | topics |
+|:--|:--|:--|
+| `2026-10-12` | **[Redis Deployments Unveiled: Practical Case Studies](https://medium.com/learn-to-earn/redis-deployments-unveiled-practical-case-studies-0c6f11eceaad)** | `deployment` `case-study` `redis` |
+| `2026-10-12` | **[What Are Wildcard SSL Certificates (And Do You Actually Need One)?](https://medium.com/learn-to-earn/what-are-wildcard-ssl-certificates-and-do-you-actually-need-one-d8a9597f386b)** | `ssl-certificate` `web-development` `security` |
+| `2026-10-12` | **[Let’s Encrypt vs Cloudflare vs Managed SSL: Which One Should You Use?](https://codeminer.medium.com/lets-encrypt-vs-cloudflare-vs-managed-ssl-which-one-should-you-use-246dc37e7181)** | `web-development` `ssl-certificate` `security` |
+| `2026-10-12` | **[Free Custom Domain Options for Developers in 2026, Compared](https://codeminer.medium.com/free-custom-domain-options-for-developers-in-2026-compared-5c823b113454)** | `web-development` `programming` `domain-names` |
+| `2026-10-12` | **[How Long Does DNS Propagation Really Take?](https://codeminer.medium.com/how-long-does-dns-propagation-really-take-18d31c956098)** | `dns` `domain-names` `web-development` |
+| `2026-10-12` | **[How to Put a Render or Railway App on a Custom Domain With HTTPS](https://codeminer.medium.com/how-to-put-a-render-or-railway-app-on-a-custom-domain-with-https-1d6402dd6d2b)** | `devops` `web-development` `domain-names` |
 <!-- BLOG-POST-LIST:END -->
 
 <sub>Latest articles from <a href="https://medium.com/@codeminer">Medium</a>, synced automatically.</sub>
