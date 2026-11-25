@@ -589,8 +589,8 @@ def product_card_svg(p):
         col, label = (GREEN, "ONLINE") if ok else (RED, "DOWN")
         body.append(blink_dot(W - 120, 56, col) + f'<text x="{W-106}" y="61" fill="{col}" font-size="13" font-weight="700" letter-spacing="1.5">{label}</text>')
     elif st == "invite":
-        body.append(f'<g transform="translate({W-150} 46)"><rect x="0" y="6" width="14" height="11" rx="2" fill="{CYAN}"/><path d="M3 6V3a4 4 0 0 1 8 0v3" fill="none" stroke="{CYAN}" stroke-width="2"/></g>'
-                    f'<text x="{W-128}" y="61" fill="{CYAN}" font-size="13" font-weight="700" letter-spacing="1.5">PRIVATE BETA</text>')
+        body.append(f'<g transform="translate({W-164} 46)"><rect x="0" y="6" width="14" height="11" rx="2" fill="{CYAN}"/><path d="M3 6V3a4 4 0 0 1 8 0v3" fill="none" stroke="{CYAN}" stroke-width="2"/></g>'
+                    f'<text x="{W-142}" y="61" fill="{CYAN}" font-size="13" font-weight="700" letter-spacing="1.5">PRIVATE BETA</text>')
     else:
         body.append(blink_dot(W - 130, 56, AMBER) + f'<text x="{W-116}" y="61" fill="{AMBER}" font-size="13" font-weight="700" letter-spacing="1.5">BUILDING</text>')
     host = re.sub(r"^(https?://|mailto:)", "", p.get("url", "")).split("/")[0].split("?")[0]
