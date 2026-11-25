@@ -1,0 +1,17 @@
+{
+  "login": "AxatSachani",
+  "display_name": "AKSHAT SACHANI",
+  "role": "Backend Engineer · Founder, Moonlight Devs",
+  "subline": "APIs · data models · distributed systems · AI developer tools",
+  "location": "AHMEDABAD, IN",
+  "tz_name": "IST",
+  "tz_offset_hours": 5.5,
+  "products": [
+    {"name": "diffnix", "desc": "AI code review", "status": "ok"},
+    {"name": "faqvault", "desc": "semantic search", "status": "ok"},
+    {"name": "domaindock", "desc": "edge routing + SSL", "status": "ok"},
+    {"name": "solarradar", "desc": "aurora forecasts", "status": "wait"}
+  ],
+  "guestbook_prefix": "deploy:",
+  "guestbook_keep": 20
+}
