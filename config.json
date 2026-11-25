@@ -1,17 +1,146 @@
 {
   "login": "AxatSachani",
   "display_name": "AKSHAT SACHANI",
-  "role": "Backend Engineer · Founder, Moonlight Devs",
+  "role": "Backend Engineer · Founder of MoonlightDevs & DomainDock",
   "subline": "APIs · data models · distributed systems · AI developer tools",
   "location": "AHMEDABAD, IN",
   "tz_name": "IST",
   "tz_offset_hours": 5.5,
-  "products": [
-    {"name": "diffnix", "desc": "AI code review", "status": "ok"},
-    {"name": "faqvault", "desc": "semantic search", "status": "ok"},
-    {"name": "domaindock", "desc": "edge routing + SSL", "status": "ok"},
-    {"name": "solarradar", "desc": "aurora forecasts", "status": "wait"}
+  "feeds": [
+    "https://medium.com/feed/@codeminer"
   ],
-  "guestbook_prefix": "deploy:",
+  "products": [
+    {
+      "id": "moonlightdevs",
+      "name": "MoonlightDevs",
+      "url": "https://moonlightdevs.com",
+      "check": "https://moonlightdevs.com",
+      "logo": "assets/logos/moonlightdevs.png",
+      "role": "FOUNDER",
+      "status": "live",
+      "boot": "studio",
+      "tagline": "We build tech products developers love.",
+      "desc": "My product studio. Designs, builds and runs its own AI developer tools, knowledge platforms and web infrastructure.",
+      "tags": [
+        "Product studio",
+        "AI dev tools",
+        "Infra"
+      ]
+    },
+    {
+      "id": "domaindock",
+      "name": "DomainDock",
+      "url": "https://digitalweb.host",
+      "check": "https://digitalweb.host",
+      "logo": "assets/logos/domaindock.png",
+      "role": "FOUNDER",
+      "status": "live",
+      "boot": "edge routing + SSL",
+      "tagline": "Stop sending cryptic deploy URLs.",
+      "desc": "Free custom domains with auto-SSL, managed DNS and Traefik routing. HTTPS live in under 30 seconds, health-checked around the clock.",
+      "tags": [
+        "Traefik",
+        "Let's Encrypt",
+        "Cloudflare DNS"
+      ]
+    },
+    {
+      "id": "diffnix",
+      "name": "Diffnix",
+      "url": "https://diffnix.com",
+      "check": "https://diffnix.com",
+      "logo": "assets/logos/diffnix.png",
+      "role": "BUILT AT MOONLIGHTDEVS",
+      "status": "live",
+      "boot": "AI code review",
+      "tagline": "AI code review that finishes before your coffee does.",
+      "desc": "Reviews pull requests in seconds and flags what humans miss — security holes, leaked secrets and architecture drift.",
+      "tags": [
+        "LLMs",
+        "Security",
+        "GitHub PRs"
+      ]
+    },
+    {
+      "id": "faqvault",
+      "name": "FaqVault",
+      "url": "https://faqvault.com",
+      "check": "https://faqvault.com",
+      "logo": "assets/logos/faqvault.png",
+      "role": "BUILT AT MOONLIGHTDEVS",
+      "status": "live",
+      "boot": "semantic search",
+      "tagline": "Definitive answers. Curated, verified, instant.",
+      "desc": "A free vault of 4,500+ verified answers across 30+ categories, searchable by meaning instead of keywords. No paywall.",
+      "tags": [
+        "Semantic search",
+        "AI verification"
+      ]
+    },
+    {
+      "id": "lakshya",
+      "name": "Lakshya",
+      "url": "mailto:axat.sachani@gmail.com?subject=Lakshya%20access%20request",
+      "glyph": "target",
+      "role": "INVITE ONLY",
+      "status": "invite",
+      "boot": "F&O terminal",
+      "tagline": "Real-time F&O trading terminal for Indian markets.",
+      "desc": "Scans NIFTY, BANKNIFTY & SENSEX every 5 min in market hours — option chain, OI flow, max pain, IV term structure, order blocks — and turns it into ranked trade ideas with Telegram alerts and an Angel One execution gate.",
+      "tags": [
+        "SvelteKit",
+        "Express + SSE",
+        "Angel One SmartAPI",
+        "Postgres"
+      ]
+    },
+    {
+      "id": "solarradar",
+      "name": "SolarRadar",
+      "url": "",
+      "glyph": "sun",
+      "role": "OPEN SOURCE",
+      "status": "building",
+      "boot": "aurora forecasts",
+      "tagline": "Live space-weather & aurora forecasts.",
+      "desc": "An open-source dashboard for real-time solar activity and aurora forecasts powered by NOAA data, with per-city aurora alerts.",
+      "tags": [
+        "Open source",
+        "NOAA data",
+        "Real-time"
+      ]
+    }
+  ],
+  "stack": [
+    [
+      "RUNTIME",
+      "Node.js · NestJS · Express · TypeScript · Python"
+    ],
+    [
+      "DATA",
+      "PostgreSQL · MongoDB · MySQL · SQLite"
+    ],
+    [
+      "MESSAGING",
+      "Redis · RabbitMQ · Socket.IO · SSE"
+    ],
+    [
+      "INTERFACES",
+      "REST · GraphQL · Webhooks"
+    ],
+    [
+      "INFRA",
+      "AWS · Cloudflare · Traefik · Firebase"
+    ],
+    [
+      "FRONTEND",
+      "SvelteKit · React · Tailwind"
+    ],
+    [
+      "AI",
+      "LLM APIs · agents · semantic search"
+    ]
+  ],
+  "guestbook_prefix": "sign:",
   "guestbook_keep": 20
 }
