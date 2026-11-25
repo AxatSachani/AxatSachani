@@ -1,0 +1,25 @@
+# Pulls your latest blog posts into the "FIELD NOTES" section of the README.
+# 1) Replace the feed URL below with your real Medium handle (and/or any other RSS feed, comma-separated).
+# 2) Run it once from the Actions tab → "blog-posts" → Run workflow.
+name: blog-posts
+
+on:
+  schedule:
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://medium.com/feed/@YOUR_MEDIUM_HANDLE"
+          max_post_count: 5
+          template: "- `$date` &nbsp;[$title]($url)$newline"
+          date_format: "yyyy-mm-dd"
+          commit_message: "chore: sync latest field notes [skip ci]"
